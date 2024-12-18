@@ -16,7 +16,6 @@ function encodeLine(str) {
   let tmp = 1;
   for (let i = 1; i < str.length; i += 1) {
     if (str[i] === str[i - 1]) {
-      console.log(str[i] === str[i - 1]);
       tmp += 1
     } else {
       result = tmp === 1 ? `${result}${str[i-1]}` : `${result}${tmp}${str[i-1]}`;
@@ -24,7 +23,6 @@ function encodeLine(str) {
     }
   }
   result = tmp === 1 ? `${result}${str[str.length - 1]}` : `${result}${tmp}${str[str.length - 1]}`;
-  console.log(result);
   return result;
 }
 
