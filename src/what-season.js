@@ -12,14 +12,12 @@ const { NotImplementedError } = require('../extensions/index.js');
  * 
  */
 function getSeason(date) {
-  console.log(date);
   if (arguments.length === 0) return 'Unable to determine the time of year!';
   try {
     date.getTime(); 
   } catch (e) { 
     throw new Error("Invalid date!");
   }
-  //if (!(date instanceof Date) || Object.prototype.toString.call(date) !== '[object Date]' || isNaN(date)) throw new Error("Invalid date!");
 
   const month = date.getMonth();
   let season = '';
